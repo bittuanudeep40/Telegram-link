@@ -65,19 +65,12 @@
     </section>
   </main>
   <script>
-    // Try the Telegram app first. Browsers may block app links, especially inside Instagram.
-    // If Telegram doesn't take over, fall back to the official channel page.
+    // Launch Telegram without navigating this page to t.me.
+    // This keeps the website loaded when visitors return from Telegram.
     const telegramLink = document.getElementById('telegramLink');
     telegramLink.addEventListener('click', function (event) {
       event.preventDefault();
-      const fallback = 'https://t.me/cuponsanddeals';
-      let appOpened = false;
-      const onVisibility = () => { if (document.hidden) appOpened = true; };
-      document.addEventListener('visibilitychange', onVisibility, { once: true });
       window.location.href = 'tg://resolve?domain=cuponsanddeals';
-      window.setTimeout(() => {
-        if (!appOpened && !document.hidden) window.location.href = fallback;
-      }, 1100);
     });
   </script>
 </body>
