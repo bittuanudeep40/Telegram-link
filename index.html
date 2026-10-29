@@ -396,27 +396,44 @@
       </div>
 
     
+```html
 <div class="buttons">
 
+  <!-- Open Telegram app directly -->
   <a
     class="button telegram-button"
-    href="https://t.me/cuponsanddeals"
-    target="_blank"
-    rel="noopener noreferrer"
+    href="tg://resolve?domain=cuponsanddeals"
+    onclick="openTelegram(event)"
   >
     Join Our Telegram ↗
   </a>
 
+  <!-- Open WhatsApp app directly -->
   <a
     class="button whatsapp-button"
-    href="https://whatsapp.com/channel/0029Vb8Vcwj5vKA6VoblVk2B"
-    target="_blank"
-    rel="noopener noreferrer"
+    href="whatsapp://channel/0029Vb8Vcwj5vKA6VoblVk2B"
+    onclick="openWhatsApp(event)"
   >
     Join Our WhatsApp Channel ↗
   </a>
 
 </div>
+
+<script>
+  function openTelegram(event) {
+    event.preventDefault();
+
+    window.location.href = "tg://resolve?domain=cuponsanddeals";
+  }
+
+  function openWhatsApp(event) {
+    event.preventDefault();
+
+    window.location.href =
+      "whatsapp://channel/0029Vb8Vcwj5vKA6VoblVk2B";
+  }
+</script>
+
 
 
       <p class="handle">@cuponsanddeals</p>
