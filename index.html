@@ -1,77 +1,439 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#090d18" />
-  <meta name="description" content="Discover fresh coupons, shopping deals, and offers. Join Cupons & Deals on Telegram." />
-  <title>Cupons & Deals | Find Your Next Deal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b16">
+  <meta name="description" content="Discover amazing coupons, discount codes, and shopping deals. Join Coupons & Deals on Telegram and WhatsApp.">
+
+  <title>Coupons & Deals | Grab the Best Discounts</title>
+
   <style>
-    :root{color-scheme:dark;--bg:#090d18;--panel:rgba(17,25,43,.82);--text:#f7f9ff;--muted:#9daac2;--mint:#a7ffcb;--blue:#63c8ff;--line:rgba(255,255,255,.11)}
-    *{box-sizing:border-box}
-    body{margin:0;min-height:100svh;display:grid;place-items:center;padding:24px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:radial-gradient(ellipse at 10% 8%,rgba(36,113,104,.28),transparent 34%),radial-gradient(ellipse at 95% 90%,rgba(47,93,171,.28),transparent 36%),var(--bg);overflow-x:hidden}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(rgba(255,255,255,.45) .6px,transparent .6px);background-size:20px 20px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
-    .wrap{width:min(100%,480px);position:relative}
-    .card{position:relative;overflow:hidden;padding:clamp(28px,7vw,42px) clamp(22px,6vw,34px) 28px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(22,32,53,.94),rgba(12,18,32,.94));box-shadow:0 30px 100px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.05);text-align:center;backdrop-filter:blur(18px)}
-    .card:before{content:"";position:absolute;width:230px;height:230px;right:-120px;top:-145px;border-radius:50%;background:rgba(99,200,255,.14);filter:blur(5px);pointer-events:none}
-    .topline{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:28px;color:#c6d4e9;font-size:.72rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
-    .live-dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 12px rgba(167,255,203,.8)}
-    .logo{width:82px;height:82px;display:grid;place-items:center;margin:0 auto 22px;border:1px solid rgba(167,255,203,.35);border-radius:26px;background:linear-gradient(145deg,#c3ffda,#52dca0);box-shadow:0 12px 40px rgba(82,220,160,.18);transform:rotate(-4deg)}
-    .logo svg{width:46px;height:46px;transform:rotate(4deg)}
-    h1{margin:0;font-size:clamp(2.45rem,9vw,3.25rem);line-height:.98;letter-spacing:-.065em;font-weight:850}
-    h1 span{color:var(--mint)}
-    .description{max-width:340px;margin:18px auto 25px;color:var(--muted);font-size:.98rem;line-height:1.7}
-    .telegram-button{display:flex;align-items:center;justify-content:center;gap:11px;width:100%;min-height:60px;padding:16px 18px;border:1px solid rgba(255,255,255,.18);border-radius:17px;background:linear-gradient(110deg,#b7ffd1,#8de9ff);color:#081925;font-size:1rem;font-weight:850;text-decoration:none;box-shadow:0 10px 30px rgba(99,200,255,.12);transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}
-    .telegram-button:hover{transform:translateY(-3px);filter:brightness(1.04);box-shadow:0 15px 35px rgba(99,200,255,.2)}
-    .telegram-button:focus-visible{outline:3px solid white;outline-offset:4px}
-    .telegram-button svg{width:23px;height:23px;flex-shrink:0}
-    .handle{margin:13px 0 8px;color:#e0e8f6;font-size:.88rem;font-weight:650;letter-spacing:.025em}
-    .helper{max-width:330px;margin:0 auto;color:#8795ad;font-size:.78rem;line-height:1.55}
-    .divider{height:1px;margin:27px 0 22px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
-    .coming{display:flex;align-items:center;gap:12px;padding:15px 14px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.025);text-align:left}
-    .wa-icon{width:42px;height:42px;display:grid;place-items:center;flex-shrink:0;border-radius:14px;background:rgba(37,211,102,.12);color:#55e88d}
-    .wa-icon svg{width:23px;height:23px}
-    .coming-text{min-width:0}.coming-text strong{display:block;font-size:.91rem}.coming-text span{display:block;margin-top:4px;color:var(--muted);font-size:.77rem}
-    .soon{margin-left:auto;padding:7px 9px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(255,255,255,.06);color:#d5e0f2;font-size:.63rem;font-weight:850;letter-spacing:.06em;white-space:nowrap}
-    footer{margin-top:22px;color:#718099;font-size:.74rem;letter-spacing:.025em}
-    @media(max-width:370px){body{padding:14px}.card{padding:27px 18px 23px;border-radius:25px}.soon{font-size:.57rem;padding:6px 7px}.coming{gap:9px}.coming-text span{font-size:.72rem}}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
+    :root {
+      --bg: #070b16;
+      --panel: #10182a;
+      --text: #ffffff;
+      --muted: #a5b1c8;
+      --yellow: #ffe600;
+      --green: #48ff91;
+      --blue: #63c8ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      padding: 24px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 50% 15%, rgba(255, 230, 0, 0.10), transparent 35%),
+        radial-gradient(ellipse at 0% 100%, rgba(72, 255, 145, 0.09), transparent 35%),
+        radial-gradient(ellipse at 100% 100%, rgba(99, 200, 255, 0.12), transparent 35%),
+        var(--bg);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.15;
+      background-image: radial-gradient(#ffffff 0.7px, transparent 0.7px);
+      background-size: 24px 24px;
+    }
+
+    .wrap {
+      position: relative;
+      width: 100%;
+      max-width: 510px;
+      margin: auto;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      padding: 35px 28px 27px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 30px;
+      background: linear-gradient(
+        145deg,
+        rgba(20, 30, 51, 0.97),
+        rgba(9, 14, 27, 0.98)
+      );
+      box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.5),
+        inset 0 1px rgba(255, 255, 255, 0.06);
+      text-align: center;
+      backdrop-filter: blur(18px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin-bottom: 27px;
+      color: #dce5f6;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 14px var(--green);
+      animation: pulse 1.8s infinite;
+    }
+
+    /* YOUR PHOTO: THE MAIN CENTER ATTRACTION */
+
+    .hero-photo {
+      position: relative;
+      width: min(100%, 330px);
+      aspect-ratio: 1 / 1;
+      margin: 0 auto 28px;
+      border-radius: 28px;
+      isolation: isolate;
+    }
+
+    .hero-photo::before {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      z-index: -1;
+      border-radius: 32px;
+      background: conic-gradient(
+        from 0deg,
+        var(--yellow),
+        var(--green),
+        var(--blue),
+        var(--yellow)
+      );
+      animation: rotateGlow 8s linear infinite;
+    }
+
+    .hero-photo::after {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      z-index: -2;
+      border-radius: 40px;
+      background: rgba(255, 230, 0, 0.12);
+      filter: blur(30px);
+      pointer-events: none;
+    }
+
+    .hero-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border: 4px solid #11182a;
+      border-radius: 27px;
+      background: #10182a;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+      animation: floatPhoto 4s ease-in-out infinite;
+    }
+
+    .brand-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 7px 13px;
+      border: 1px solid rgba(255, 230, 0, 0.3);
+      border-radius: 999px;
+      background: rgba(255, 230, 0, 0.08);
+      color: var(--yellow);
+      font-size: 0.72rem;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 10vw, 4.1rem);
+      font-weight: 950;
+      line-height: 0.96;
+      letter-spacing: -0.07em;
+    }
+
+    h1 span {
+      display: block;
+      margin-top: 7px;
+      color: var(--yellow);
+      text-shadow: 0 0 30px rgba(255, 230, 0, 0.15);
+    }
+
+    .description {
+      max-width: 360px;
+      margin: 20px auto 27px;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .benefits {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 0 0 28px;
+    }
+
+    .benefit {
+      padding: 9px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.035);
+      color: #e4ebf7;
+      font-size: 0.77rem;
+      font-weight: 700;
+    }
+
+    .buttons {
+      display: grid;
+      gap: 13px;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 59px;
+      padding: 16px 18px;
+      border: 1px solid transparent;
+      border-radius: 16px;
+      font-size: 0.97rem;
+      font-weight: 850;
+      text-decoration: none;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.07);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid white;
+      outline-offset: 4px;
+    }
+
+    .telegram-button {
+      color: #091522;
+      background: linear-gradient(110deg, #ffe600, #baff72);
+      box-shadow: 0 10px 30px rgba(255, 230, 0, 0.12);
+    }
+
+    .whatsapp-button {
+      color: #061b12;
+      background: linear-gradient(110deg, #75ffae, #48e98d);
+      box-shadow: 0 10px 30px rgba(72, 255, 145, 0.1);
+    }
+
+    .button .arrow {
+      font-size: 1.15rem;
+    }
+
+    .handle {
+      margin: 15px 0 0;
+      color: #dce5f6;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .divider {
+      height: 1px;
+      margin: 28px 0 21px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.15),
+        transparent
+      );
+    }
+
+    .bottom-text {
+      margin: 0;
+      color: #a9b6cc;
+      font-size: 0.83rem;
+      line-height: 1.7;
+    }
+
+    .bottom-text strong {
+      color: var(--green);
+    }
+
+    footer {
+      margin-top: 23px;
+      color: #75839d;
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 5px var(--green);
+      }
+      50% {
+        box-shadow: 0 0 17px var(--green);
+      }
+    }
+
+    @keyframes rotateGlow {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes floatPhoto {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    @media (max-width: 390px) {
+      body {
+        padding: 14px 11px;
+      }
+
+      .card {
+        padding: 28px 19px 23px;
+        border-radius: 25px;
+      }
+
+      .hero-photo {
+        width: min(100%, 270px);
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      .benefits {
+        gap: 7px;
+      }
+
+      .benefit {
+        font-size: 0.7rem;
+        padding: 8px 9px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
   </style>
 </head>
+
 <body>
   <main class="wrap">
     <section class="card" aria-labelledby="title">
-      <div class="topline"><span class="live-dot"></span> Your shortcut to better deals</div>
-      <div class="logo" aria-hidden="true">
-        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 23.1 39.1 11c1.45-.52 2.72.35 2.25 2.53l-5.29 24.93c-.39 1.77-1.44 2.2-2.92 1.37l-9.04-6.66-4.36 4.21c-.48.48-.89.89-1.82.89l.65-9.2L35.3 15.8c.72-.65-.16-1.02-1.1-.37L13.1 28.56l-8.95-2.79c-1.94-.61-1.98-1.93.42-2.67Z" fill="#08251A"/></svg>
-      </div>
-      <h1 id="title">Cupons<br><span>&amp; Deals.</span></h1>
-      <p class="description">Good finds. Better prices. Join our Telegram channel for coupons, offers, and deals worth grabbing.</p>
 
-      <a class="telegram-button" id="telegramLink" href="tg://resolve?domain=cuponsanddeals" aria-label="Open Cupons and Deals in the Telegram app">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 4.2 18.4 19.3c-.24 1.07-.87 1.33-1.76.83l-4.87-3.59-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.95 9.01-8.14c.39-.35-.09-.55-.59-.2L6.07 12.94l-4.82-1.5c-1.05-.33-1.07-1.04.23-1.54L20.33 2.7c.87-.32 1.63.21 1.27 1.5Z"/></svg>
-        Open in Telegram <span aria-hidden="true">↗</span>
-      </a>
+      <div class="eyebrow">
+        <span class="live-dot" aria-hidden="true"></span>
+        Your shortcut to better deals
+      </div>
+
+      <!-- Your picture is the only logo on the website -->
+      <div class="hero-photo">
+        <img
+          src="pic.jpeg"
+          alt="Coupons and Deals brand profile picture"
+          width="330"
+          height="330"
+          fetchpriority="high"
+        >
+      </div>
+
+      <div class="brand-label">Save more on every purchase</div>
+
+      <h1 id="title">
+        Coupons
+        <span>&amp; Deals.</span>
+      </h1>
+
+      <p class="description">
+        Good finds. Better prices. Discover amazing offers, discount codes,
+        and products worth grabbing, all in one place.
+      </p>
+
+      <div class="benefits" aria-label="What you can find">
+        <span class="benefit">Hot Deals</span>
+        <span class="benefit">Discount Codes</span>
+        <span class="benefit">Product Offers</span>
+      </div>
+
+    
+<div class="buttons">
+
+  <!-- Telegram: Open the channel in the Telegram app -->
+  <a
+    class="button telegram-button"
+    href="tg://resolve?domain=cuponsanddeals"
+    aria-label="Open Coupons and Deals in Telegram"
+  >
+    Join Our Telegram ↗
+  </a>
+
+  <!-- WhatsApp: Open the channel in WhatsApp -->
+  <a
+    class="button whatsapp-button"
+    href="whatsapp://channel/0029Vb8Vcwj5vKA6VoblVk2B"
+    aria-label="Open Coupons and Deals in WhatsApp"
+  >
+    Join Our WhatsApp Channel ↗
+  </a>
+
+</div>
+
+
       <p class="handle">@cuponsanddeals</p>
-      <p class="helper">Tap once to open our channel in Telegram. If Instagram blocks the app link, open this page in your external browser and try again.</p>
 
       <div class="divider"></div>
-      <div class="coming" aria-label="WhatsApp channel coming soon">
-        <div class="wa-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z"/><path d="M9 8.5c.5 2.2 2.2 3.9 4.5 4.5l1.2-1.2 2 1c-.2 1.4-1.2 2.1-2.5 2.1-3.4-.5-6.5-3.6-7-7 0-1.3.7-2.3 2.1-2.5l1 2L9 8.5Z"/></svg></div>
-        <div class="coming-text"><strong>WhatsApp Channel</strong><span>Another way to catch the deals.</span></div>
-        <span class="soon">COMING SOON</span>
-      </div>
-      <footer>Less scrolling. More saving. ✦</footer>
+
+      <p class="bottom-text">
+        Find the offers. Grab the discounts.<br>
+        <strong>Shop smarter. Save more.</strong>
+      </p>
+
+      <footer>
+        COUPONS &amp; DEALS · YOUR DAILY DOSE OF SAVINGS
+      </footer>
+
     </section>
   </main>
-  <script>
-    // Launch Telegram without navigating this page to t.me.
-    // This keeps the website loaded when visitors return from Telegram.
-    const telegramLink = document.getElementById('telegramLink');
-    telegramLink.addEventListener('click', function (event) {
-      event.preventDefault();
-      window.location.href = 'tg://resolve?domain=cuponsanddeals';
-    });
-  </script>
 </body>
 </html>
